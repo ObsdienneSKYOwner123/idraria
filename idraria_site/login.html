@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connexion | IDRARIA Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><div class="mark">ID</div><div>IDRARIA Shop</div></div>
+  </header>
+
+  <main class="container">
+    <div class="login-container">
+      <div class="form-box">
+        <h2>Connexion</h2>
+        <input id="username" placeholder="Pseudo">
+        <input id="password" type="password" placeholder="Mot de passe">
+        <button id="loginBtn">Se connecter</button>
+        <p>Pas encore de compte ? <a href="#" id="showSignup">Inscription</a></p>
+      </div>
+
+      <div class="form-box" id="signupBox" style="display:none">
+        <h2>Inscription</h2>
+        <input id="newUser" placeholder="Pseudo">
+        <input id="newPass" type="password" placeholder="Mot de passe">
+        <button id="signupBtn">Créer un compte</button>
+        <p>Déjà un compte ? <a href="#" id="showLogin">Connexion</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('showSignup').addEventListener('click', function(e){ e.preventDefault(); document.querySelector('.form-box').style.display='none'; document.getElementById('signupBox').style.display='block'; });
+    document.getElementById('showLogin').addEventListener('click', function(e){ e.preventDefault(); document.querySelector('.form-box').style.display='block'; document.getElementById('signupBox').style.display='none'; });
+    document.getElementById('signupBtn').addEventListener('click', signup);
+    document.getElementById('loginBtn').addEventListener('click', login);
+  </script>
+</body>
+</html>

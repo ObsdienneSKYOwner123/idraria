@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IDRARIA Shop — Catalogue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><div class="mark">ID</div><div>IDRARIA Shop</div></div>
+    <div class="search-wrap">
+      <div class="search">
+        <select id="categoryFilter" title="Catégorie">
+          <option value="all">Toutes catégories</option>
+        </select>
+        <div style="flex:1;position:relative" class="suggestions">
+          <input id="searchInput" placeholder="Rechercher un produit, ex: pioche, arc, armure..." aria-label="Recherche" />
+          <div id="suggestList" class="suggest-list" style="display:none"></div>
+        </div>
+        <button id="searchBtn">Rechercher</button>
+      </div>
+    </div>
+    <div class="top-actions">
+      <a href="login.html" id="loginLink">Compte</a>
+      <a href="panier.html">Panier (<span id="cartCount">0</span>)</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="left">
+        <h1>Bienvenue sur IDRARIA — Boutique Survie & SkyGen</h1>
+        <p>Catalogue d'items, outils, et packs pour ton serveur Minecraft Bedrock.</p>
+      </div>
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='320'><rect width='100%' height='100%' fill='%23fff8e1'/><text x='20' y='40' font-size='28' fill='%230b3a66' font-family='Arial'>IDRARIA — Survie / SkyGen</text></svg>" alt="hero"/>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="categories">
+          <h3>Catégories</h3>
+          <ul id="catList"></ul>
+        </div>
+      </aside>
+
+      <section>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="font-size:18px;color:#0b3a66">Produits populaires</h2>
+          <div style="font-size:14px;color:#6b7280">Affichés : <span id="count">0</span></div>
+        </div>
+
+        <div id="products" class="products"></div>
+      </section>
+    </div>
+
+    <footer>
+      © <span id="year"></span> IDRARIA — Démo e‑commerce
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

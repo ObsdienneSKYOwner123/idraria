@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panier — IDRARIA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><div class="mark">ID</div><div>IDRARIA Shop</div></div>
+    <div class="top-actions">
+      <a href="index.html">Catalogue</a>
+      <a href="login.html" id="loginLink">Compte</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="margin:12px 0">Ton panier</h2>
+    <div id="cartArea"></div>
+
+    <footer>
+      © <span id="year"></span> IDRARIA — Démo e‑commerce
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    renderCart();
+  </script>
+</body>
+</html>
